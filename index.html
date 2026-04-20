@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 Proyectos IoT Rentables</title>
+  <meta name="description" content="Descubrí 7 proyectos IoT rentables para crear soluciones vendibles, controlar equipos desde el celular y transformar conocimiento en negocio." />
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg2:#0d1f38;
+      --card:#0f2747;
+      --card2:#132f56;
+      --text:#f4f8ff;
+      --muted:#c3d4f4;
+      --accent:#53c5ff;
+      --accent2:#73ffd1;
+      --gold:#ffd166;
+      --border:rgba(255,255,255,.12);
+      --shadow:0 18px 40px rgba(0,0,0,.28);
+      --radius:22px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(83,197,255,.18), transparent 26%),
+        radial-gradient(circle at top right, rgba(115,255,209,.12), transparent 28%),
+        linear-gradient(180deg, #06101d 0%, #0a1830 52%, #07111f 100%);
+      line-height:1.55;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .container{width:min(var(--max), 92%); margin:0 auto;}
+    .topbar{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(12px);
+      background:rgba(6,16,29,.72);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:20px; padding:14px 0;
+    }
+    .brand{
+      font-weight:800; letter-spacing:.3px; font-size:1rem;
+    }
+    .brand span{color:var(--accent2)}
+    .nav{
+      display:flex; gap:16px; flex-wrap:wrap; align-items:center;
+      color:var(--muted); font-size:.95rem;
+    }
+    .cta-btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:14px 22px; border-radius:999px;
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#04111e; font-weight:800; box-shadow:var(--shadow);
+      transition:.25s transform ease, .25s opacity ease;
+    }
+    .cta-btn:hover{transform:translateY(-2px); opacity:.95}
+
+    .hero{
+      padding:72px 0 48px;
+    }
+    .hero-grid{
+      display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:center;
+    }
+    .eyebrow{
+      display:inline-block;
+      padding:8px 14px; border:1px solid rgba(115,255,209,.28);
+      border-radius:999px; color:var(--accent2); font-weight:700; font-size:.92rem;
+      background:rgba(115,255,209,.08); margin-bottom:18px;
+    }
+    h1{
+      margin:0 0 16px; font-size:clamp(2.2rem, 4vw, 4.4rem); line-height:1.08;
+      letter-spacing:-1.2px;
+    }
+    .hero p{
+      margin:0 0 14px; color:var(--muted); font-size:1.08rem;
+    }
+    .hero-strong{
+      color:#fff;
+      font-weight:700;
+    }
+    .hero-actions{
+      display:flex; flex-wrap:wrap; gap:14px; margin-top:24px;
+    }
+    .ghost-btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:14px 22px; border-radius:999px; font-weight:700;
+      border:1px solid rgba(255,255,255,.18); color:var(--text);
+      background:rgba(255,255,255,.04);
+    }
+
+    .hero-card{
+      background:linear-gradient(180deg, rgba(83,197,255,.12), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:32px;
+      box-shadow:var(--shadow);
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute; width:220px; height:220px;
+      background:radial-gradient(circle, rgba(83,197,255,.18), transparent 66%);
+      right:-40px; top:-40px;
+      pointer-events:none;
+    }
+    .stat-grid{
+      display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:16px;
+    }
+    .stat{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:20px; padding:16px;
+    }
+    .stat b{display:block; font-size:1.3rem; margin-bottom:4px}
+    .stat span{color:var(--muted); font-size:.95rem}
+
+    .section{padding:34px 0}
+    .section-title{
+      font-size:clamp(1.8rem, 2.8vw, 3rem);
+      margin:0 0 12px; letter-spacing:-.7px;
+    }
+    .section-sub{
+      color:var(--muted);
+      margin:0 0 24px;
+      max-width:900px;
+      font-size:1.02rem;
+    }
+
+    .intro-video-card,
+    .business-box,
+    .pricing-card,
+    .project-card,
+    .final-cta{
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .intro-video-card{
+      overflow:hidden;
+    }
+
+    .video-cover{
+      position:relative;
+      display:block;
+      background:#000;
+      cursor:pointer;
+    }
+    .video-cover img{
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+    }
+    .video-cover::after{
+      content:"▶";
+      position:absolute;
+      inset:0;
+      display:grid;
+      place-items:center;
+      font-size:4rem;
+      color:white;
+      text-shadow:0 6px 22px rgba(0,0,0,.6);
+      background:linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.28));
+    }
+    .video-cover .label{
+      position:absolute; left:16px; bottom:16px;
+      background:rgba(0,0,0,.72); color:#fff;
+      padding:8px 12px; border-radius:999px; font-size:.9rem; font-weight:700;
+      z-index:2;
+    }
+    .video-embed{
+      width:100%;
+      aspect-ratio:16/9;
+      border:0;
+      display:block;
+      background:#000;
+    }
+
+    .business-box{
+      padding:28px;
+    }
+    .business-grid{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:18px;
+    }
+    .business-item{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:18px;
+    }
+    .business-item h3{
+      margin:0 0 10px; font-size:1.08rem;
+    }
+    .business-item p{margin:0; color:var(--muted)}
+    .business-note{
+      margin-top:18px;
+      padding:18px;
+      border-left:4px solid var(--gold);
+      background:rgba(255,209,102,.09);
+      border-radius:14px;
+      color:#fff7d1;
+    }
+
+    .pricing-wrap{
+      display:grid; grid-template-columns:repeat(3,1fr); gap:18px;
+    }
+    .pricing-card{
+      padding:26px;
+      position:relative;
+      overflow:hidden;
+    }
+    .pricing-card.featured{
+      transform:scale(1.02);
+      border:1px solid rgba(115,255,209,.35);
+      background:linear-gradient(180deg, rgba(115,255,209,.12), rgba(255,255,255,.05));
+    }
+    .badge{
+      position:absolute; top:18px; right:18px;
+      background:var(--gold); color:#261c00;
+      font-weight:800; font-size:.82rem;
+      padding:8px 12px; border-radius:999px;
+    }
+    .pricing-card h3{margin:0 0 10px; font-size:1.35rem}
+    .price{
+      font-size:2.5rem; font-weight:900; line-height:1;
+      margin:12px 0 4px;
+    }
+    .price small{font-size:1rem; font-weight:700; color:var(--muted)}
+    .pricing-card p{color:var(--muted)}
+    .pricing-list{
+      list-style:none; padding:0; margin:18px 0 22px;
+    }
+    .pricing-list li{
+      padding:10px 0; border-bottom:1px dashed rgba(255,255,255,.09);
+      color:#e6f0ff;
+    }
+
+    .projects-grid{
+      display:grid; grid-template-columns:repeat(2, 1fr); gap:22px;
+    }
+    .project-card{
+      overflow:hidden;
+    }
+    .project-body{
+      padding:22px;
+    }
+    .project-head{
+      display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
+      margin-bottom:12px;
+    }
+    .project-number{
+      display:inline-flex; align-items:center; justify-content:center;
+      min-width:42px; height:42px; border-radius:12px; font-weight:900;
+      background:linear-gradient(135deg, rgba(83,197,255,.22), rgba(115,255,209,.18));
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .project-card h3{
+      margin:0; font-size:1.3rem; line-height:1.2;
+    }
+    .project-body p{
+      color:var(--muted); margin:0;
+    }
+
+    .value-strip{
+      display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
+      margin-top:10px;
+    }
+    .value-box{
+      padding:18px; border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      text-align:center;
+      color:var(--text);
+      font-weight:700;
+    }
+    .value-box span{
+      display:block; margin-top:8px; color:var(--muted); font-weight:400; font-size:.95rem;
+    }
+
+    .final-cta{
+      padding:32px;
+      text-align:center;
+      background:
+        radial-gradient(circle at top center, rgba(83,197,255,.16), transparent 35%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    }
+    .final-cta p{
+      color:var(--muted);
+      max-width:840px;
+      margin:0 auto 18px;
+      font-size:1.05rem;
+    }
+
+    footer{
+      padding:28px 0 44px;
+      color:var(--muted);
+      text-align:center;
+      font-size:.95rem;
+    }
+
+    @media (max-width: 1024px){
+      .hero-grid,
+      .pricing-wrap,
+      .projects-grid,
+      .business-grid,
+      .value-strip{
+        grid-template-columns:1fr;
+      }
+      .pricing-card.featured{transform:none}
+    }
+
+    @media (max-width: 720px){
+      .topbar-inner{flex-direction:column; align-items:flex-start}
+      .hero{padding-top:44px}
+      .stat-grid{grid-template-columns:1fr}
+      .project-head{flex-direction:column}
+      h1{font-size:2.2rem}
+      .cta-btn, .ghost-btn{width:100%}
+      .hero-actions{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">⚙️ <span>7 Proyectos IoT</span> Rentables</div>
+      <nav class="nav">
+        <a href="#videos">Videos</a>
+        <a href="#negocio">Negocio</a>
+        <a href="#propuestas">Propuestas</a>
+        <a href="#precios">Precios</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Capacitación intensiva, práctica y orientada a vender soluciones reales</div>
+        <h1>Convertí ideas IoT en <br>soluciones vendibles <br>desde el celular</h1>
+        <p>
+          Esta propuesta reúne <span class="hero-strong">7 proyectos concretos</span> con enorme potencial comercial.
+          No se trata de aprender tecnología por aprender. Se trata de crear soluciones que un cliente pueda entender,
+          valorar y comprar.
+        </p>
+        <p>
+          Cada propuesta incluye <span class="hero-strong">acompañamiento personalizado</span>, duración de
+          <span class="hero-strong">1 mes intensivo</span>, reuniones semanales y un enfoque
+          <span class="hero-strong">100% práctico</span>.
+        </p>
+        <p>
+          Vas a descubrir cómo controlar, proteger o automatizar equipos reales con una demostración simple,
+          visual y poderosa desde el celular.
+        </p>
+        <div class="hero-actions">
+          <a class="cta-btn" href="#precios">Quiero ver los planes</a>
+          <a class="ghost-btn" href="#propuestas">Explorar las 7 propuestas</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h2 style="margin:0 0 10px; font-size:1.6rem;">Una capacitación pensada para generar impacto real</h2>
+        <p style="margin:0; color:var(--muted);">
+          Lo que hoy parece tecnología, mañana puede transformarse en servicio, solución y fuente de ingresos.
+        </p>
+        <div class="stat-grid">
+          <div class="stat">
+            <b>1 mes</b>
+            <span>de trabajo intensivo por propuesta</span>
+          </div>
+          <div class="stat">
+            <b>7 ideas</b>
+            <span>listas para convertirse en negocio</span>
+          </div>
+          <div class="stat">
+            <b>Desde el celular</b>
+            <span>demostraciones claras que aceleran la venta</span>
+          </div>
+          <div class="stat">
+            <b>Acompañamiento</b>
+            <span>personalizado y reuniones semanales</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="videos">
+    <div class="container">
+      <h2 class="section-title">Qué vas a aprender</h2>
+      <p class="section-sub">
+        Primero vas a comprender la lógica completa del modelo. Luego vas a explorar cada propuesta en detalle,
+        viendo ejemplos reales de aplicaciones que despiertan interés, muestran valor y generan el efecto wow.
+      </p>
+
+      <div class="intro-video-card">
+        <div class="video-slot" data-video-id="-zQdj0Jld_w">
+          <a class="video-cover" href="https://youtube.com/shorts/-zQdj0Jld_w" target="_blank" rel="noopener">
+            <img src="https://img.youtube.com/vi/-zQdj0Jld_w/hqdefault.jpg" alt="Video explicativo general">
+            <span class="label">P00 · Video explicativo general</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="negocio">
+    <div class="container">
+      <h2 class="section-title">Cómo convertir esto en negocio</h2>
+      <p class="section-sub">
+        Una solución IoT vendible nace cuando unimos un problema claro, un cliente específico
+        y una demostración simple desde el celular. Ahí es donde la tecnología deja de ser compleja
+        y comienza a convertirse en oportunidad.
+      </p>
+
+      <div class="business-box">
+        <div class="business-grid">
+          <div class="business-item">
+            <h3>💰 Primer ingreso</h3>
+            <p>Cobro de instalación, configuración, puesta en marcha y demostración de funcionamiento.</p>
+          </div>
+          <div class="business-item">
+            <h3>🔁 Segundo ingreso</h3>
+            <p>Mantenimiento mensual, soporte técnico, monitoreo remoto, mejoras y nuevas automatizaciones.</p>
+          </div>
+          <div class="business-item">
+            <h3>📱 Diferencial comercial</h3>
+            <p>Mostrar una demo real desde el celular acelera la confianza, la comprensión y el cierre de venta.</p>
+          </div>
+        </div>
+
+        <div class="business-note">
+          <strong>Mensaje comercial correcto:</strong> no decir “vendo un módulo”, sino
+          “te ayudo a controlar, proteger o automatizar tu equipo”.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Qué hace tan poderosa esta propuesta</h2>
+      <div class="value-strip">
+        <div class="value-box">Problema real<span>Se enfoca en dolores concretos del cliente</span></div>
+        <div class="value-box">Cliente claro<span>Cada proyecto tiene mercado y aplicación visible</span></div>
+        <div class="value-box">Demo simple<span>Se puede mostrar valor en minutos</span></div>
+        <div class="value-box">Venta más rápida<span>Lo visible y útil se vende mejor</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="propuestas">
+    <div class="container">
+      <h2 class="section-title">Las 7 propuestas</h2>
+      <p class="section-sub">
+        Cada propuesta viene acompañada de una explicación detallada y su video correspondiente.
+        En cada caso, el video aparece como imagen. Al hacer clic, se reproduce directamente desde YouTube.
+      </p>
+
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="video-slot" data-video-id="TWiEc9lXtTU">
+            <a class="video-cover" href="https://youtube.com/shorts/TWiEc9lXtTU" target="_blank" rel="noopener">
+              <img src="https://img.youtube.com/vi/TWiEc9lXtTU/hqdefault.jpg" alt="Propuesta 1 - Control remoto de bomba de agua">
+              <span class="label">P01 · Ver video</span>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <div class="project-number">01</div>
+              <h3>Control remoto de bomba de agua</h3>
+            </div>
+            <p>
+              Ideal para zonas rurales, quintas o casas alejadas. Muchas personas pierden tiempo y combustible solo para ir a encender o apagar una bomba.
+              Con un sistema IoT simple, el usuario puede accionar la bomba desde el celular y además saber si está funcionando.
+              Lo que se vende aquí no es solo comodidad: se vende ahorro de tiempo, respuesta rápida y control del recurso agua.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="video-slot" data-video-id="Ln97K5czN9M">
+            <a class="video-cover" href="https://youtube.com/shorts/Ln97K5czN9M" target="_blank" rel="noopener">
+              <img src="https://img.youtube.com/vi/Ln97K5czN9M/hqdefault.jpg" alt="Propuesta 2 - Control de luces y energía">
+              <span class="label">P02 · Ver video</span>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <div class="project-number">02</div>
+              <h3>Control de luces y energía</h3>
+            </div>
+            <p>
+              Ideal para comercios y oficinas. Un dueño puede olvidarse luces encendidas, un cartel luminoso activo fuera de horario
+              o un equipo consumiendo energía sin necesidad. El sistema permite encender, apagar o programar acciones desde cualquier lugar.
+              Es una solución fácil de demostrar y de entender, por eso suele ser una excelente puerta de entrada comercial.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="video-slot" data-video-id="NcqcXqxslxQ">
+            <a class="video-cover" href="https://youtube.com/shorts/NcqcXqxslxQ" target="_blank" rel="noopener">
+              <img src="https://img.youtube.com/vi/NcqcXqxslxQ/hqdefault.jpg" alt="Propuesta 3 - Monitoreo de temperatura con corte automático">
+              <span class="label">P03 · Ver video</span>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <div class="project-number">03</div>
+              <h3>Monitoreo de temperatura con corte automático</h3>
+            </div>
+            <p>
+              Cuando la temperatura sube demasiado, el daño puede ser enorme: mercadería arruinada, equipos fuera de servicio o pérdidas económicas importantes.
+              Con este producto se monitorea la temperatura y, si se supera un valor crítico, se puede activar una alarma, enviar una alerta o incluso cortar un equipo.
+              Es una propuesta que se entiende muy rápido porque protege dinero, stock y continuidad operativa.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="video-slot" data-video-id="i1xUAJ3k77o">
+            <a class="video-cover" href="https://youtube.com/shorts/i1xUAJ3k77o" target="_blank" rel="noopener">
+              <img src="https://img.youtube.com/vi/i1xUAJ3k77o/hqdefault.jpg" alt="Propuesta 4 - Protección de motores por temperatura y vibración">
+              <span class="label">P04 · Ver video</span>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <div class="project-number">04</div>
+              <h3>Protección de motores por temperatura y vibración</h3>
+            </div>
+            <p>
+              Un producto de mayor valor técnico y económico. Muchos motores muestran señales antes de fallar:
+              vibración anormal, calentamiento excesivo o funcionamiento inestable. Si el sistema detecta esos patrones,
+              puede alertar al usuario o detener el motor para evitar una rotura mayor. Aquí se vende prevención,
+              mantenimiento inteligente y reducción de costos de reparación.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="video-slot" data-video-id="WmA2fVPIzP0">
+            <a class="video-cover" href="https://youtube.com/shorts/WmA2fVPIzP0" target="_blank" rel="noopener">
+              <img src="https://img.youtube.com/vi/WmA2fVPIzP0/hqdefault.jpg" alt="Propuesta 5 - Apertura remota de puertas o portones">
+              <span class="label">P05 · Ver video</span>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <div class="project-number">05</div>
+              <h3>Apertura remota de puertas o portones</h3>
+            </div>
+            <p>
+              Muy útil para cocheras, depósitos, accesos domiciliarios o pequeños predios. El dueño puede abrir un portón desde el celular
+              sin necesidad de estar presente, lo que mejora comodidad y seguridad. También puede integrarse con horarios,
+              usuarios autorizados o confirmación de apertura. Es un producto atractivo porque el beneficio es visible e inmediato.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="video-slot" data-video-id="1yFT1HEAfTg">
+            <a class="video-cover" href="https://youtube.com/shorts/1yFT1HEAfTg" target="_blank" rel="noopener">
+              <img src="https://img.youtube.com/vi/1yFT1HEAfTg/hqdefault.jpg" alt="Propuesta 6 - Alerta de nivel de tanque">
+              <span class="label">P06 · Ver video</span>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <div class="project-number">06</div>
+              <h3>Alerta de nivel de tanque</h3>
+            </div>
+            <p>
+              En muchos hogares, edificios o entornos rurales, un tanque vacío o desbordado genera molestias, pérdidas y urgencias.
+              Este sistema informa el nivel del tanque y puede disparar alertas cuando falta agua o cuando se alcanza un nivel peligroso.
+              El cliente compra previsión, tranquilidad y una forma simple de evitar problemas repetitivos.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card" style="grid-column:1 / -1;">
+          <div class="video-slot" data-video-id="44Br9daBKTs">
+            <a class="video-cover" href="https://youtu.be/44Br9daBKTs" target="_blank" rel="noopener">
+              <img src="https://img.youtube.com/vi/44Br9daBKTs/hqdefault.jpg" alt="Propuesta 7 - Tu propia escuela de tecnología">
+              <span class="label">P07 · Ver video</span>
+            </a>
+          </div>
+          <div class="project-body">
+            <div class="project-head">
+              <div class="project-number">07</div>
+              <h3>Tu propia escuela de tecnología</h3>
+            </div>
+            <p>
+              Esta capacitación está dirigida a educadores de todos los niveles, formales o independientes, y también a profesionales con vocación de enseñar.
+              Es ideal para quienes desean actualizarse y crear una propuesta educativa moderna basada en robótica, domótica y automatización.
+              No importa la edad ni la experiencia previa en programación, ya que la inteligencia artificial permite diseñar clases y proyectos de forma simple.
+              Está pensada para quienes buscan generar ingresos a partir de su conocimiento, construyendo una escuela propia, flexible y escalable.
+              Es una oportunidad para enseñar a alumnos de 8 a 80 años, impactar vidas y desarrollar un negocio educativo rentable con propósito.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="precios">
+    <div class="container">
+      <h2 class="section-title">Elegí cómo querés avanzar</h2>
+      <p class="section-sub">
+        Podés comenzar con una propuesta específica, acelerar con tres o desplegar la visión completa con las siete.
+        En todos los casos, el enfoque es el mismo: acompañamiento, práctica y transformación en solución vendible.
+      </p>
+
+      <div class="pricing-wrap">
+        <div class="pricing-card">
+          <h3>1 propuesta</h3>
+          <div class="price">U$S 150</div>
+          <p>Ideal para comenzar con un proyecto puntual y validarlo rápido.</p>
+          <ul class="pricing-list">
+            <li>1 mes intensivo</li>
+            <li>Reuniones semanales</li>
+            <li>Acompañamiento personalizado</li>
+            <li>Enfoque totalmente práctico</li>
+          </ul>
+          <a class="cta-btn" href="#contacto">Quiero esta opción</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="badge">Más elegida</div>
+          <h3>3 propuestas</h3>
+          <div class="price">U$S 300</div>
+          <p>La mejor relación entre profundidad, variedad y velocidad de salida comercial.</p>
+          <ul class="pricing-list">
+            <li>3 proyectos con potencial de venta</li>
+            <li>1 mes intensivo por cada propuesta</li>
+            <li>Acompañamiento personalizado</li>
+            <li>Construcción de mayor portafolio</li>
+          </ul>
+          <a class="cta-btn" href="#contacto">Quiero esta opción</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Las 7 propuestas</h3>
+          <div class="price">U$S 500</div>
+          <p>Para quien quiere dominar el mapa completo y abrir múltiples caminos de negocio.</p>
+          <ul class="pricing-list">
+            <li>Visión completa del ecosistema</li>
+            <li>7 soluciones listas para presentar</li>
+            <li>Más oportunidades de mercado</li>
+            <li>Mayor autoridad comercial y técnica</li>
+          </ul>
+          <a class="cta-btn" href="#contacto">Quiero esta opción</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="final-cta">
+        <h2 class="section-title" style="margin-top:0;">Hoy no estás viendo solo proyectos</h2>
+        <p>
+          Estás viendo oportunidades concretas para ayudar a otros a controlar, proteger o automatizar equipos reales.
+          Cuando una solución se entiende rápido, se demuestra fácil y resuelve un problema concreto, el mercado responde.
+        </p>
+        <p>
+          Esta puede ser la puerta de entrada a una nueva etapa: más valor, más impacto y una propuesta tecnológica que el cliente realmente quiere comprar.
+        </p>
+        <a class="cta-btn" href="https://wa.me/5491166416777" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      Landing creada para presentar las 7 propuestas IoT rentables · Lista para publicar en GitHub Pages
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.video-slot').forEach(function(slot){
+      const cover = slot.querySelector('.video-cover');
+      if (!cover) return;
+
+      cover.addEventListener('click', function(e){
+        e.preventDefault();
+        const videoId = slot.getAttribute('data-video-id');
+        const iframe = document.createElement('iframe');
+        iframe.className = 'video-embed';
+        iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+        iframe.title = 'Video de YouTube';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        slot.innerHTML = '';
+        slot.appendChild(iframe);
+      });
+    });
+  </script>
+</body>
+</html>
